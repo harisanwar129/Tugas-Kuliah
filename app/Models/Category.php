@@ -16,4 +16,9 @@ class Category extends Model
     public function parent() {
         return $this->belongsTo('App\Models\Category', 'parent_id');
     }
+
+    public function produk()
+    {
+        return $this->belongsToMany('App\Models\Produk','kategori_produk');
+    }
 }
